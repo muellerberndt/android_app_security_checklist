@@ -57,8 +57,8 @@ A checklist with security considerations for designing, testing, and releasing s
 - [ ] [Debugging symbols have been removed from native binaries.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-for-debugging-symbols)
 - [ ] [Debugging code has been removed, and the app does not log verbose errors or debugging messages.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-for-debugging-code-and-verbose-error-logging)
 - [ ] [The app catches and handles possible exceptions.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-exception-handling)
-- [ ] [Error handling logic in security controls denies access by default.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#user-content-testing-for-memory-corruption-bugs-in-native-code)
-- [ ] [In unmanaged code, memory is allocated, freed and used securely.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#)
+- [ ] [Error handling logic in security controls denies access by default.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-exception-handling)
+- [ ] [In unmanaged code, memory is allocated, freed and used securely.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md##user-content-testing-for-memory-corruption-bugs-in-native-code)
 - [ ] [Free security features offered by the toolchain, such as byte-code minification, stack protection, PIE support and automatic reference counting, are activated.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#user-content-verify-that-free-security-features-are-activated)
 
 ## Defense-in-Depth
