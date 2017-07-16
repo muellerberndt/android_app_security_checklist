@@ -35,7 +35,7 @@ A checklist with security considerations for designing, testing, and releasing s
 
 ## Authentication
 
-- [ ] [If the app provides users with access to a remote service, an acceptable form of authentication such as username/password authentication is performed at the remote endpoint.](https://github.com/OWASP/owasp-mstg/blob/master/Document/Testcases/0x07a-Testing-Authentication-and-Session-Management.md#verifying-that-users-are-properly-authenticated)
+- [ ] If the app provides users with access to a remote service, an acceptable form of authentication such as username/password authentication is performed at the remote endpoint.
 - [ ] [If stateful session management is used, the remote endpoint uses randomly generated session identifiers to authenticate client requests without sending the user's credentials.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-session-management)
 - [ ] [If stateless token-based authentication is used, the server provides a token signed using a secure algorithm.](https://github.com/OWASP/owasp-mstg/blob/master/Document/Testcases/0x07a-Testing-Authentication-and-Session-Management.md#testing-json-web-token-jwt)
 - [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-the-logout-functionality)
