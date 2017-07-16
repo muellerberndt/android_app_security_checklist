@@ -24,25 +24,25 @@ Checklist with security considerations for designing, testing, and releasing And
 - [ ] [If native methods of the app are exposed to a WebView, that WebView only renders JavaScript contained within the app package](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-whether-java-objects-are-exposed-through-webviews).
 - [ ] [Object serialization, if any, is implemented using safe serialization APIs.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-object-de-serialization)
 
-## Cryptography
+## [Cryptography]
 
-- [ ] [The app does not rely on symmetric cryptography with hardcoded keys as a sole method of encryption.]
-- [ ] [The app uses proven implementations of cryptographic primitives.]
-- [ ] [The app uses cryptographic primitives that are appropriate for the particular use-case, configured with parameters that adhere to industry best practices.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05e-Testing-Cryptography.md#verifying-the-configuration-of-cryptographic-standard-algorithms)
-- [ ] [The app does not use cryptographic protocols or algorithms that are widely considered depreciated for security purposes.]
-- [ ] [The app doesn't re-use the same cryptographic key for multiple purposes.]
-- [ ] [All random values are generated using a sufficiently secure random number generator.]
+- [ ] [The app does not rely on symmetric cryptography with hardcoded keys as a sole method of encryption.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#user-content-testing-for-hardcoded-cryptographic-keys)
+- [ ] [The app uses proven implementations of cryptographic primitives.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#user-content-testing-for-custom-implementations-of-cryptography)
+- [ ] [The app uses cryptographic primitives that are appropriate for the particular use-case, configured with parameters that adhere to industry best practices.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05e-Testing-Cryptography.md#user-content-verifying-the-configuration-of-cryptographic-standard-algorithms)
+- [ ] [The app does not use cryptographic protocols or algorithms that are widely considered depreciated for security purposes.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md##user-content-testing-for-insecure-andor-deprecated-cryptographic-algorithms)
+- [ ] [All random values are generated using a sufficiently secure random number generator.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05e-Testing-Cryptography.md#user-content-testing-random-number-generation)
+- [ ] The app doesn't re-use the same cryptographic key for multiple purposes.
 
 ## Authentication
 
 - [ ] [If the app provides users with access to a remote service, an acceptable form of authentication such as username/password authentication is performed at the remote endpoint.](https://github.com/OWASP/owasp-mstg/blob/master/Document/Testcases/0x07a-Testing-Authentication-and-Session-Management.md#verifying-that-users-are-properly-authenticated)
-- [ ] [If stateful session management is used, the remote endpoint uses randomly generated session identifiers to authenticate client requests without sending the user's credentials.]()
+- [ ] [If stateful session management is used, the remote endpoint uses randomly generated session identifiers to authenticate client requests without sending the user's credentials.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-session-management)
 - [ ] [If stateless token-based authentication is used, the server provides a token signed using a secure algorithm.](https://github.com/OWASP/owasp-mstg/blob/master/Document/Testcases/0x07a-Testing-Authentication-and-Session-Management.md#testing-json-web-token-jwt)
-- [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.]()
-- [ ] [A password policy exists and is enforced at the remote endpoint.]()
-- [ ] [The remote endpoint implements an exponential back-off, or temporarily locks the user account, when incorrect authentication credentials are submitted an excessive number of times.]()
+- [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-the-logout-functionality)
+- [ ] [A password policy exists and is enforced at the remote endpoint.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-the-password-policy)
+- [ ] [The remote endpoint implements an exponential back-off, or temporarily locks the user account, when incorrect authentication credentials are submitted an excessive number of times.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-excessive-login-attempts)
 - [ ] [Biometric authentication, if any, is not event-bound (i.e. using an API that simply returns "true" or "false"). Instead, it is based on unlocking the Keystore.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05f-Testing-Local-Authentication.md#testing-biometric-authentication)
-- [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.]()
+- [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-the-session-timeout)
 
 ## Network
 
@@ -57,25 +57,25 @@ Checklist with security considerations for designing, testing, and releasing And
 - [ ] [Debugging symbols have been removed from native binaries.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-for-debugging-symbols)
 - [ ] [Debugging code has been removed, and the app does not log verbose errors or debugging messages.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-for-debugging-code-and-verbose-error-logging)
 - [ ] [The app catches and handles possible exceptions.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-exception-handling)
-- [ ] [Error handling logic in security controls denies access by default.]()
-- [ ] [In unmanaged code, memory is allocated, freed and used securely.]()
-- [ ] [Free security features offered by the toolchain, such as byte-code minification, stack protection, PIE support and automatic reference counting, are activated.]()
+- [ ] [Error handling logic in security controls denies access by default.]
+- [ ] [In unmanaged code, memory is allocated, freed and used securely.]
+- [ ] [Free security features offered by the toolchain, such as byte-code minification, stack protection, PIE support and automatic reference counting, are activated.]
 
 ## Defense-in-Depth
 
-- [ ] [No sensitive data is included in backups generated by the mobile operating system.]()
-- [ ] [The app removes sensitive data from views when backgrounded.]()
-- [ ] [The app does not hold sensitive data in memory longer than necessary, and memory is cleared explicitly after use.]()	
-- [ ] [The app enforces a minimum device-access-security policy, such as requiring the user to set a device passcode.]()	
-- [ ] [The app educates the user about the types of personally identifiable information.]()
-- [ ] [Sessions and server side signed tokens are terminated at the remote endpoint after a predefined period of inactivity.]()]()
-- [ ] [A second factor of authentication exists at the remote endpoint and the 2FA requirement is consistently enforced.	
-- [ ] [Step-up authentication is required to enable actions that deal with sensitive data or transactions.]()
-- [ ] [The app informs the user of all login activities with his or her account. Users are able view a list of devices used to access the account, and to block specific devices.]()
-- [ ] [The app either uses its own certificate store, or pins the endpoint certificate or public key, and subsequently does not establish connections with endpoints that offer a different certificate or key, even if signed by a trusted CA.]()
-- [ ] [The app doesn't rely on a single insecure communication channel (email or SMS) for critical operations, such as enrollments and account recovery.]()
-- [ ] [The app only depends on up-to-date connectivity and security libraries.]()
-- [ ] [The app detects whether it is being executed on a rooted or jailbroken device. Depending on the business requirement, users are warned, or the app is terminated if the device is rooted or jailbroken.]()
+- [ ] [No sensitive data is included in backups generated by the mobile operating system.]
+- [ ] [The app removes sensitive data from views when backgrounded.]
+- [ ] [The app does not hold sensitive data in memory longer than necessary, and memory is cleared explicitly after use.]
+- [ ] [The app enforces a minimum device-access-security policy, such as requiring the user to set a device passcode.]
+- [ ] [The app educates the user about the types of personally identifiable information.]
+- [ ] [Sessions and server side signed tokens are terminated at the remote endpoint after a predefined period of inactivity.]
+- [ ] [A second factor of authentication exists at the remote endpoint and the 2FA requirement is consistently enforced.]
+- [ ] [Step-up authentication is required to enable actions that deal with sensitive data or transactions.]
+- [ ] [The app informs the user of all login activities with his or her account. Users are able view a list of devices used to access the account, and to block specific devices.]
+- [ ] [The app either uses its own certificate store, or pins the endpoint certificate or public key, and subsequently does not establish connections with endpoints that offer a different certificate or key, even if signed by a trusted CA.]
+- [ ] [The app doesn't rely on a single insecure communication channel (email or SMS) for critical operations, such as enrollments and account recovery.]
+- [ ] [The app only depends on up-to-date connectivity and security libraries.]
+- [ ] [The app detects whether it is being executed on a rooted or jailbroken device. Depending on the business requirement, users are warned, or the app is terminated if the device is rooted or jailbroken.]
 
 
 
