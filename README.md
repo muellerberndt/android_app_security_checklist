@@ -16,8 +16,8 @@ Checklist with security considerations for designing, testing, and releasing And
 ## Platfom Interaction
 
 - [ ] [The app only requests the minimum set of permissions necessary.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-app-permissions)
-- [ ] [All inputs from external sources and the user are validated and if necessary sanitized. This includes data received via the UI, IPC mechanisms such as intents, custom URLs, and network sources.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-input-validation-and-sanitization)
-- [ ] [The app does not export sensitive functionality via custom URL schemes without proper protection.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-custom-url-schemes)]
+- [ ] [All inputs from external sources and the user are validated and if necessary sanitized. This includes data received via the UI, IPC mechanisms such as intents, custom URLs, and network sources.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#user-content-testing-for-injection-flaws)
+- [ ] [The app does not export sensitive functionality via custom URL schemes without proper protection.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-custom-url-schemes)
 - [ ] [The app does not export sensitive functionality through IPC facilities without proper protection.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-for-sensitive-functionality-exposure-through-ipc)
 - [ ] [JavaScript is disabled in WebViews unless explicitly required.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-javascript-execution-in-webviews)
 - [ ] [WebViews are configured to allow only the minimum set of protocol handlers required (ideally, only https is supported). Potentially dangerous handlers, such as file, tel and app-id, are disabled.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-webview-protocol-handlers)
@@ -26,12 +26,12 @@ Checklist with security considerations for designing, testing, and releasing And
 
 ## Cryptography
 
-- [ ] [The app does not rely on symmetric cryptography with hardcoded keys as a sole method of encryption.]()
-- [ ] [The app uses proven implementations of cryptographic primitives.]()
+- [ ] [The app does not rely on symmetric cryptography with hardcoded keys as a sole method of encryption.]
+- [ ] [The app uses proven implementations of cryptographic primitives.]
 - [ ] [The app uses cryptographic primitives that are appropriate for the particular use-case, configured with parameters that adhere to industry best practices.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05e-Testing-Cryptography.md#verifying-the-configuration-of-cryptographic-standard-algorithms)
-- [ ] [The app does not use cryptographic protocols or algorithms that are widely considered depreciated for security purposes.]()
-- [ ] [The app doesn't re-use the same cryptographic key for multiple purposes.]()
-- [ ] [All random values are generated using a sufficiently secure random number generator.]()
+- [ ] [The app does not use cryptographic protocols or algorithms that are widely considered depreciated for security purposes.]
+- [ ] [The app doesn't re-use the same cryptographic key for multiple purposes.]
+- [ ] [All random values are generated using a sufficiently secure random number generator.]
 
 ## Authentication
 
