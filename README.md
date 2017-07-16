@@ -22,7 +22,7 @@ A checklist with security considerations for designing, testing, and releasing s
 - [ ] [JavaScript is disabled in WebViews unless explicitly required.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-javascript-execution-in-webviews)
 - [ ] [WebViews are configured to allow only the minimum set of protocol handlers required (ideally, only https is supported). Potentially dangerous handlers, such as file, tel and app-id, are disabled.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-webview-protocol-handlers)
 - [ ] [If native methods of the app are exposed to a WebView, that WebView only renders JavaScript contained within the app package](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-whether-java-objects-are-exposed-through-webviews).
-- [ ] [Object serialization, if any, is implemented using safe serialization APIs.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-object-de-serialization)
+- [ ] [Object serialization, if any, is implemented using safe serialization APIs.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#user-content-testing-object-persistence)
 
 ## Cryptography
 
