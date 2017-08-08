@@ -26,9 +26,9 @@ A checklist with security considerations for designing, testing, and releasing s
 
 ## Cryptography
 
-- [ ] [The app does not rely on symmetric cryptography with hardcoded keys as a sole method of encryption.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#user-content-testing-for-hardcoded-cryptographic-keys)
-- [ ] [The app uses proven implementations of cryptographic primitives.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#user-content-testing-for-custom-implementations-of-cryptography)
-- [ ] [The app uses cryptographic primitives that are appropriate for the particular use-case, configured with parameters that adhere to industry best practices.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05e-Testing-Cryptography.md#user-content-verifying-the-configuration-of-cryptographic-standard-algorithms)
+- [ ] [The app does not rely on symmetric cryptography with hardcoded keys as a sole method of encryption.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#user-content-testing-for-misuse-and-misconfiguration-of-cryptography)
+- [ ] [The app uses proven implementations of cryptographic primitives.](ttps://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#user-content-testing-for-misuse-and-misconfiguration-of-cryptography)
+- [ ] [The app uses cryptographic primitives that are appropriate for the particular use-case, configured with parameters that adhere to industry best practices.](ttps://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#user-content-testing-for-misuse-and-misconfiguration-of-cryptography)
 - [ ] [The app does not use cryptographic protocols or algorithms that are widely considered depreciated for security purposes.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#user-content-testing-for-insecure-andor-deprecated-cryptographic-algorithms)
 - [ ] [All random values are generated using a sufficiently secure random number generator.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05e-Testing-Cryptography.md#user-content-testing-random-number-generation)
 - [ ] The app doesn't re-use the same cryptographic key for multiple purposes.
