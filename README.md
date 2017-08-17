@@ -35,12 +35,12 @@ A checklist with security considerations for designing, testing, and releasing s
 
 ## Authentication
 
-- [ ] [If the app provides users with access to a remote service, an acceptable form of authentication such as username/password authentication is performed at the remote endpoint.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-authentication-with-the-back-end)
+- [ ] [If the app provides users with access to a remote service, an acceptable form of authentication such as username/password authentication is performed at the remote endpoint.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-authentication-on-the-back-end)
 - [ ] [A password policy exists and is enforced at the remote endpoint.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-the-password-policy)
 - [ ] [The remote endpoint implements an exponential back-off, or temporarily locks the user account, when incorrect authentication credentials are submitted an excessive number of times.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-excessive-login-attempts)
 - [ ] [If stateful session management is used, the remote endpoint uses randomly generated session identifiers to authenticate client requests without sending the user's credentials.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-stateful-session-management)
 - [ ] [If stateless token-based authentication is used, the server provides a token signed using a secure algorithm.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-stateless-token-based-authentication)
-- [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-the-logout-functionality)
+- [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-content-testing-user-logout)
 - [ ] [Biometric authentication, if any, is not event-bound (i.e. using an API that simply returns "true" or "false"). Instead, it is based on unlocking the Keystore.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05f-Testing-Local-Authentication.md#testing-biometric-authentication)
 
 ## Network
