@@ -45,9 +45,9 @@ A checklist with security considerations for designing, testing, and releasing s
 
 ## Network
 
-- [ ] [Data is encrypted on the network using TLS. The secure channel is used consistently throughout the app.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#testing-for-unencrypted-sensitive-data-on-the-network)
-- [ ] [The TLS settings are in line with current best practices, or as close as possible if the mobile operating system does not support the recommended standards.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#testing-for-unencrypted-sensitive-data-on-the-network#verifying-the-tls-settings)
-- [ ] [The app verifies the X.509 certificate of the remote endpoint when the secure channel is established. Only certificates signed by a trusted CA are accepted.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-endpoint-identify-verification)
+- [ ] [Data is encrypted on the network using TLS. The secure channel is used consistently throughout the app.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#verifying-data-encryption-on-the-network)
+- [ ] [The TLS settings are in line with current best practices, or as close as possible if the mobile operating system does not support the recommended standards.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#testing-for-unencrypted-sensitive-data-on-the-network#recommended-tls-settings)
+- [ ] [The app verifies the X.509 certificate of the remote endpoint when the secure channel is established. Only certificates signed by a trusted CA are accepted.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#intercepting-traffic-on-the-network-layer)
 
 ## Code Quality
 
