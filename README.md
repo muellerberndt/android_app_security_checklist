@@ -1,6 +1,6 @@
 # Android App Security Checklist
 
-A checklist with security considerations for designing, testing, and releasing secure Android apps. It is based on the [OWASP Mobile Application Security Verification Standard](https://github.com/OWASP/owasp-masvs/) and [Mobile Security Testing Guide](https://github.com/OWASP/owasp-mstg/). Follow the links on each checklist item for detailed instructions and recommendations.
+A checklist with security considerations for designing, testing, and releasing secure Android apps. It is based on the [OWASP Mobile Application Security Verification Standard](https://github.com/OWASP/owasp-masvs/), [Mobile Security Testing Guide](https://github.com/OWASP/owasp-mstg/) and others. Follow the links on each checklist item for detailed instructions and recommendations.
 
 ------------------------------------------------------------------------------
 ## Data Storage
@@ -42,6 +42,12 @@ A checklist with security considerations for designing, testing, and releasing s
 - [ ] [If stateless token-based authentication is used, the server provides a token signed using a secure algorithm.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#testing-stateless-token-based-authentication)
 - [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#user-logout-and-session-timeouts)
 - [ ] [Biometric authentication, if any, is not event-bound (i.e. using an API that simply returns "true" or "false"). Instead, it is based on unlocking the Keystore.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05f-Testing-Local-Authentication.md#testing-biometric-authentication)
+
+## WebView
+
+- [ ] [WebView correctly validates the incoming URL.](https://blog.oversecured.com/Android-security-checklist-webview/#insufficient-url-validation)
+- [ ] [The app sanitizes the JavaScript data when injected.](https://blog.oversecured.com/Android-security-checklist-webview/#javascript-code-injections)
+- [ ] [WebViewClient sanitizes the Intent received from the URL before launching it.](https://blog.oversecured.com/Android-security-checklist-webview/#attacks-on-internal-url-handlers)
 
 ## Network
 
