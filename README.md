@@ -45,28 +45,29 @@ A checklist with security considerations for designing, testing, and releasing s
 - [ ] [The remote endpoint terminates the existing stateful session or invalidates the stateless session token when the user logs out.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#testing-user-logout-mstg-auth-4)
 - [ ] [Biometric authentication, if any, is not event-bound (i.e. using an API that simply returns "true" or "false"). Instead, it is based on unlocking the Keystore.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05f-Testing-Local-Authentication.md#testing-biometric-authentication-mstg-auth-8)
 
-## WebView
+## WebViews
 
-- [ ] [WebView correctly validates the incoming URL.](https://blog.oversecured.com/Android-security-checklist-webview/#insufficient-url-validation)
+- [ ] [WebViews correctly validate incoming URLs.](https://blog.oversecured.com/Android-security-checklist-webview/#insufficient-url-validation)
 - [ ] [The app sanitizes the JavaScript data when injected.](https://blog.oversecured.com/Android-security-checklist-webview/#javascript-code-injections)
 - [ ] [WebViewClient sanitizes the Intent received from the URL before launching it.](https://blog.oversecured.com/Android-security-checklist-webview/#attacks-on-internal-url-handlers)
 
 ## Network
 
-- [ ] [Data is encrypted on the network using TLS. The secure channel is used consistently throughout the app.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#verifying-data-encryption-on-the-network)
-- [ ] [The TLS settings are in line with current best practices, or as close as possible if the mobile operating system does not support the recommended standards.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#testing-for-unencrypted-sensitive-data-on-the-network#recommended-tls-settings)
-- [ ] [The app verifies the X.509 certificate of the remote endpoint when the secure channel is established. Only certificates signed by a trusted CA are accepted.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-endpoint-identify-verification)
+- [ ] [Data is encrypted on the network using TLS. The secure channel is used consistently throughout the app.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-data-encryption-on-the-network-mstg-network-1)
+- [ ] [The TLS settings are in line with current best practices, or as close as possible if the mobile operating system does not support the recommended standards.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#verifying-the-tls-settings-mstg-network-2)
+- [ ] [The app verifies the X.509 certificate of the remote endpoint when the secure channel is established. Only certificates signed by a trusted CA are accepted.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-endpoint-identify-verification-mstg-network-3)
 
 ## Code Quality
 
-- [ ] [The app is signed and provisioned with valid certificate.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#verifying-that-the-app-is-properly-signed)
-- [ ] [The app has been built in release mode, with settings appropriate for a release build (e.g. non-debuggable).](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-if-the-app-is-debuggable)
-- [ ] [Debugging symbols have been removed from native binaries.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-for-debugging-symbols)
-- [ ] [Debugging code has been removed, and the app does not log verbose errors or debugging messages.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-for-debugging-code-and-verbose-error-logging)
-- [ ] [The app catches and handles possible exceptions.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-exception-handling)
-- [ ] [Error handling logic in security controls denies access by default.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-exception-handling)
-- [ ] [In unmanaged code, memory is allocated, freed and used securely.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#memory-corruption-bugs)
-- [ ] [Free security features offered by the toolchain, such as byte-code minification, stack protection, PIE support and automatic reference counting, are activated.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#user-content-verify-that-free-security-features-are-activated)
+- [ ] [The app is signed and provisioned with valid certificate.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#making-sure-that-the-app-is-properly-signed-mstg-code-1)
+- [ ] [The app has been built in release mode, with settings appropriate for a release build (e.g. non-debuggable).](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-whether-the-app-is-debuggable-mstg-code-2)
+- [ ] [Debugging symbols have been removed from native binaries.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-for-debugging-symbols-mstg-code-3)
+- [ ] [Debugging code has been removed, and the app does not log verbose errors or debugging messages.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-for-debugging-code-and-verbose-error-logging-mstg-code-4)
+- [ ] [Third-party libraries have been checked for weaknesses](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#checking-for-weaknesses-in-third-party-libraries-mstg-code-5)
+- [ ] [The app catches and handles possible exceptions.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-exception-handling-mstg-code-6-and-mstg-code-7)
+- [ ] [Error handling logic in security controls denies access by default.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#testing-exception-handling-mstg-code-6-and-mstg-code-7)
+- [ ] [In unmanaged code, memory is allocated, freed and used securely.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#memory-corruption-bugs-mstg-code-8)
+- [ ] [Free security features offered by the toolchain, such as byte-code minification, stack protection, PIE support and automatic reference counting, are activated.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05i-Testing-Code-Quality-and-Build-Settings.md#make-sure-that-free-security-features-are-activated-mstg-code-9)
 
 ## Defense-in-Depth
 
@@ -77,8 +78,8 @@ A checklist with security considerations for designing, testing, and releasing s
 - [ ] [A second factor of authentication exists at the remote endpoint and the 2FA requirement is consistently enforced.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#verifying-that-2fa-is-enforced)
 - [ ] [Step-up authentication is required to enable actions that deal with sensitive data or transactions.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#2-factor-authentication-and-step-up-authentication)
 - [ ] [Sessions and access tokens are invalidated at the remote endpoint after a predefined period of inactivity.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#session-timeout)
-- [ ] [The app either uses its own certificate store, or pins the endpoint certificate or public key, and subsequently does not establish connections with endpoints that offer a different certificate or key, even if signed by a trusted CA.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning)
-- [ ] [The app doesn't rely on a single insecure communication channel (email or SMS) for critical operations, such as enrollments and account recovery.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#making-sure-that-critical-operations-use-secure-communication-channels)
+- [ ] [The app either uses its own certificate store, or pins the endpoint certificate or public key, and subsequently does not establish connections with endpoints that offer a different certificate or key, even if signed by a trusted CA.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning-mstg-network-4)
+- [ ] [The app doesn't rely on a single insecure communication channel (email or SMS) for critical operations, such as enrollments and account recovery.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04f-Testing-Network-Communication.md#making-sure-that-critical-operations-use-secure-communication-channels-mstg-network-5)
 - [ ] [The app detects whether it is being executed on a rooted device. Depending on the business requirement, users are warned, or the app is terminated if the device is rooted.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#user-content-testing-root-detection)
 - [ ] [The app informs the user of all login activities with his or her account. Users are able view a list of devices used to access the account, and to block specific devices.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04e-Testing-Authentication-and-Session-Management.md#testing-login-activity-and-device-blocking-mstg-auth-11)
 - [ ] he app educates the user about the types of personally identifiable information.
