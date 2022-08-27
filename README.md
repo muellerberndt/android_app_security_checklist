@@ -1,17 +1,19 @@
 # Android App Security Checklist
 
-A checklist with security considerations for designing, testing, and releasing secure Android apps. It is based on the [OWASP Mobile Application Security Verification Standard](https://github.com/OWASP/owasp-masvs/), [Mobile Security Testing Guide](https://github.com/OWASP/owasp-mstg/) and others. Follow the links on each checklist item for detailed instructions and recommendations.
+A checklist with security considerations for designing, testing, and releasing secure Android apps. It is based on the [OWASP Mobile Application Security Verification Standard](https://github.com/OWASP/owasp-masvs/), [Mobile Application Security Testing Guide](https://github.com/OWASP/owasp-mstg/) and others. Follow the links on each checklist item for detailed instructions and recommendations.
 
 ------------------------------------------------------------------------------
 ## Data Storage
 
-- [ ] [The Keystore is used to store sensitive data, such as user credentials or cryptographic keys.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-local-storage-for-sensitive-data)
-- [ ] [No sensitive data is written to application logs.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-logs-for-sensitive-data)
-- [ ] [No sensitive data is shared with third parties unless it is a necessary part of the architecture.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#determining-whether-sensitive-data-is-sent-to-third-parties)
-- [ ] [The keyboard cache is disabled on text inputs that process sensitive data.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#determining-whether-the-keyboard-cache-is-disabled-for-text-input-fields)
-- [ ] [The clipboard is deactivated on text fields that may contain sensitive data.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#finding-sensitive-data-on-the-clipboard)
-- [ ] [No sensitive data is exposed via IPC mechanisms.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#determining-whether-sensitive-stored-data-has-been-exposed-via-ipc-mechanisms)
-- [ ] [No sensitive data, such as passwords or pins, is exposed through the user interface.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-for-sensitive-data-disclosure-through-the-user-interface)
+- [ ] [The Keystore is used to store sensitive data, such as user credentials or cryptographic keys.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#keystore)
+- [ ] [No sensitive data is written to application logs.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs)
+- [ ] [No sensitive data is shared with third parties unless it is a necessary part of the architecture.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#determining-whether-sensitive-data-is-shared-with-third-parties-mstg-storage-4)
+- [ ] [The keyboard cache is disabled on text inputs that process sensitive data.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#determining-whether-the-keyboard-cache-is-disabled-for-text-input-fields-mstg-storage-5)
+- [ ] [No sensitive data is exposed via IPC mechanisms.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#determining-whether-sensitive-stored-data-has-been-exposed-via-ipc-mechanisms-mstg-storage-6)
+- [ ] [No sensitive data, such as passwords or pins, is exposed through the user interface.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-for-sensitive-data-disclosure-through-the-user-interface-mstg-storage-7)
+- [ ] [No sensitive data is included in backups.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-backups-for-sensitive-data-mstg-storage-8)
+- [ ] [Sensitive data is removed from views when they're moved to the background](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#finding-sensitive-information-in-auto-generated-screenshots-mstg-storage-9)
+
 
 ## Platform Interaction
 
