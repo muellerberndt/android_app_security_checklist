@@ -12,7 +12,7 @@ A checklist with security considerations for designing, testing, and releasing s
 - [ ] [No sensitive data is exposed via IPC mechanisms.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#determining-whether-sensitive-stored-data-has-been-exposed-via-ipc-mechanisms-mstg-storage-6)
 - [ ] [No sensitive data, such as passwords or pins, is exposed through the user interface.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-for-sensitive-data-disclosure-through-the-user-interface-mstg-storage-7)
 - [ ] [No sensitive data is included in backups.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-backups-for-sensitive-data-mstg-storage-8)
-- [ ] [Sensitive data is removed from views when they're moved to the background](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#finding-sensitive-information-in-auto-generated-screenshots-mstg-storage-9)
+- [ ] [Sensitive data is removed from views when they're moved to the background.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#finding-sensitive-information-in-auto-generated-screenshots-mstg-storage-9)
 
 
 ## Platform Interaction
@@ -28,10 +28,10 @@ A checklist with security considerations for designing, testing, and releasing s
 
 ## Cryptography
 
-- [ ] [The app does not rely on symmetric cryptography with hardcoded keys as a sole method of encryption.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#symmetric-encryption-with-hard-coded-cryptographic-keys)
-- [ ] [The app uses proven implementations of cryptographic primitives.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#custom-implementations-of-cryptography)
-- [ ] [The app uses cryptographic primitives that are appropriate for the particular use-case, configured with parameters that adhere to industry best practices.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms)
-- [ ] [The app does not use cryptographic protocols or algorithms that are widely considered depreciated for security purposes.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms)
+- [ ] [The app does not rely on symmetric cryptography with hardcoded keys as a sole method of encryption.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05e-Testing-Cryptography.md#testing-symmetric-cryptography-mstg-crypto-1)
+- [ ] [The app uses proven implementations of cryptographic primitives.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#cryptographic-apis-on-android-and-ios)
+- [ ] [The app uses cryptographic primitives that are appropriate for the particular use-case, configured with parameters that adhere to industry best practices.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#common-configuration-issues-mstg-crypto-1-mstg-crypto-2-and-mstg-crypto-3)
+- [ ] [The app does not use cryptographic protocols or algorithms that are widely considered depreciated for security purposes.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4)
 - [ ] [All random values are generated using a sufficiently secure random number generator.](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators)
 - [ ] The app doesn't re-use the same cryptographic key for multiple purposes.
 
